@@ -432,7 +432,7 @@ ul, li {
 @media (max-width: 991px) {
   .sidenav {
     width: 250px;
-    padding: 50px;
+    padding: 20px;
   }
 }
 @media (max-width: 767px) {
