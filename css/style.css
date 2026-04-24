@@ -443,7 +443,7 @@ ul, li {
     left: -250px;
     background-color: #ff0000;
   }
-  .sidenav .drop-menu a.active, .drop-menu a:hover{color: #040e4b !important;}
+
 }
 .sidenav .navbar-brand img {
   max-width: 150px;
