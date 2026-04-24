@@ -467,13 +467,13 @@ ul, li {
   content: "";
   height: 2px;
   width: 0;
-  background-color: #ff0000;
+  background-color: #040e4b;
   left: 0;
   bottom: 13px;
   transition: 0.3s;
 }
 .sidenav .nav-link:hover {
-  color: #ff0000 !important;
+  color: #040e4b !important;
 }
 .sidenav .nav-link:hover::after {
   width: 15px;
