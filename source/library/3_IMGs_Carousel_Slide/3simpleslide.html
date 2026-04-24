@@ -1,89 +1,248 @@
-    <style type="text/css">
-        @media only screen and (max-width:699px) {
-      .respimg {width:100% !important; height:auto !important;}
-      .lfloat{float:left !important;}
-      .db{display:block !important;}
-      .resptab{width:100% !important;}
-      }
+  <style>
+    /** Carousel CSS **/
 body{
   padding:0;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
 
+  /* Hide Fallback content first */
+  .fallback{
+    display:none;
+  }
+
+  .carousel{
+    display:block !important;
+    max-height:none !important;
+    position:relative;
+  }
+
+  /* 
+  Selective blocking for clients.
+  - Samsung (#MessageViewBody) - no absolute positioning
+  - Comcast/Zimbra (body.MsgBody) - inconsistent CSS support
+  */
+  #MessageViewBody .fallback,
+  body.MsgBody .fallback{ 
+    display:block; 
+  }
+  #MessageViewBody .carousel,
+  body.MsgBody .carousel{
+    display:none !important;
+  }
+
   .carousel a{
+    width:100%;
+    display:block;
+    overflow:hidden;
+  }  
+
+  .carousel img{
+    display:block!important;
+    width:100% !important;
+    height:auto !important;
+  }
+
+  .carousel.responsive{
+    width:100% !important;
+  }
+
+  .carousel.responsive .car-cont{
+    width:100% !important;
+    height:auto !important;
+  }  
+
+  /* Fade  */
+  .carousel.fade a{
     position:absolute;
     top:0px;
     left:0px; 
+    opacity:0;   
     -webkit-animation: car-anim 9s linear infinite;    
   }
 
-  .carousel a:nth-child(1){
-    -webkit-animation-delay: 0s;    
+  .carousel.fade a:nth-child(1){
+    position:relative;
+    -webkit-animation-delay: -10s;    
   }
-  .carousel a:nth-child(2){
-    -webkit-animation-delay: 3s;    
+  .carousel.fade a:nth-child(2){
+    -webkit-animation-delay: -7s;    
   }
-  .carousel a:nth-child(3){
-    -webkit-animation-delay: 6s;    
+  .carousel.fade a:nth-child(3){
+    -webkit-animation-delay: -4s;    
   }
 
-  @-webkit-keyframes car-anim 
+
+
+  @-webkit-keyframes car-anim
   {
+      /* start fade in */
       0% {
         z-index:2;
+        opacity:0;
       }
+      /* end fade in */
+      5%{
+        opacity:1;
+      }
+      /* start fade out */
       33%{
         z-index:2;
       }
-      33.001%{
+      33.1%{
         z-index:1;
+      }
+      /* end fade out */
+      38%{
+        opacity:1;
+      }
+      /* drop z-index to 1 */
+      38.1%{
+        opacity:0;
       }
       100%{
         z-index:1;
+        opacity:0;
       }
   }
 
-/*  @-webkit-keyframes car-anim
+
+  /* EFFECTS */
+  .carousel.effects img{
+    -webkit-animation-name: effect-zoomin;
+    -webkit-animation-duration: 9s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+  }
+  .carousel.effects a:nth-child(1) img{
+    -webkit-animation-delay: -10s;    
+  }
+  .carousel.effects a:nth-child(2) img{
+    -webkit-animation-delay: -7s;    
+  }
+  .carousel.effects a:nth-child(3) img{
+    -webkit-animation-delay: -4s;    
+  }
+
+
+
+  .carousel.effects img.zoom-in{
+    -webkit-animation-name: effect-zoomin;
+  }
+  .carousel.effects img.zoom-out{
+    -webkit-animation-name: effect-zoomout;
+  }
+  .carousel.effects img.pan-right{
+    -webkit-animation-name: effect-panright;
+  }
+  .carousel.effects img.pan-left{
+    -webkit-animation-name: effect-panleft;
+  }
+
+  @-webkit-keyframes effect-zoomin
   {
-      0% {
-        z-index:3;
-      }
-      33%{
-        z-index:3;
-      }
-      33.001%{
-        z-index:2;
-      }
-      66%{
-        z-index:2;
-      }
-      66.001%{
-        z-index:1;
-      }
-      100%{
-        z-index:1;
-      }
-  }*/
+    0% {
+      -webkit-transform: scale(1);
+    }
+    33.33%{
+      -webkit-transform: scale(1.2);
+    }
+    38%{
+      -webkit-transform: scale(1.2);
+    }
+    100%{
+      -webkit-transform: scale(1);
+    }
+  }
+  @-webkit-keyframes effect-zoomout
+  {
+    0% {
+      -webkit-transform: scale(1.2);
+    }
+    33.33%{
+      -webkit-transform: scale(1);
+    }
+    38%{
+      -webkit-transform: scale(1);
+    }
+    100%{
+      -webkit-transform: scale(1.2);
+    }
+  }
+
+  @-webkit-keyframes effect-panright
+  {
+    0% {
+      -webkit-transform: scale(1.2);
+      margin-left:-10%;
+    }
+    33.33%{
+      -webkit-transform: scale(1.2);
+      margin-left:10%;
+    }
+    38%{
+      -webkit-transform: scale(1.2);
+      margin-left:10%;
+    }
+    100%{
+      -webkit-transform: scale(1.2);
+      margin-left:-10%;
+    }
+  }
+  @-webkit-keyframes effect-panleft
+  {
+    0% {
+      -webkit-transform: scale(1.2);
+      margin-left:10%;
+    }
+    33.33%{
+      -webkit-transform: scale(1.2);
+      margin-left:-10%;
+    }
+    38%{
+      -webkit-transform: scale(1.2);
+      margin-left:-10%;
+    }
+    100%{
+      -webkit-transform: scale(1.2);
+      margin-left:10%;
+    }
+  }
 
 }
+/******************/
+  </style>
 
 
-</style>
 
-
-
-      <table cellpadding="0" cellspacing="0" border="0" width="600" class="resptab" role="presentation" style="width:600px;"> 
-        <tr align="center">
-          <td align="center">
-          	<div class="carousel fade car-cont">
-          		<a href="##">
-          			<img src="https://placehold.co/1200x800/?text=IMG1" border="0" width="600" height="400" class="respimg"></a>
-							<a href="##">
-								<img src="https://placehold.co/1200x800/?text=IMG2" border="0" width="600" height="400" class="respimg"></a>
-							<a href="##">
-								<img src="https://placehold.co/1200x800/?text=IMG3" border="0" width="600" height="400" class="respimg"></a>
-						</div>
-          </td>
-        </tr>
-      </table>
+<table cellpadding="0" cellspacing="0" border="0" width="600" class="resptab" role="presentation" style="width:600px;">
+  <tr align="center">
+    <td align="center">
+      <!-- content -->
+      <!-- animated carousel -->
+      <!--[if !mso]> -->
+      <div class="carousel fade responsive effects" style="overflow:hidden;display:none;max-height:0px;">
+        <div class="car-cont" style="position:relative; width:px; height:px;">
+          <a href="##">
+            <img class="zoom-in" src="https://placehold.co/1200x800/text=Image+1" border="0">
+          </a>
+          <a href="##">
+            <img class="zoom-out" src="https://placehold.co/1200x800/text=Image+2" border="0">
+          </a>
+          <a href="##">
+            <img class="pan-right" src="https://placehold.co/1200x800/text=Image+3" border="0">
+          </a>
+        </div>
+      </div>
+      <!--<![endif]-->
+      <br><br>
+      <!-- static fallback content -->
+      <div class="fallback">
+        <a href="##" >
+          <img src="https://placehold.co/1200x800/?text=Fallback+Image" width="600" height="400" style="display:block;" border="0" class="respimg">
+        </a>
+      </div>
+      <!-- /content -->
+    </td>
+  </tr>
+</table>
