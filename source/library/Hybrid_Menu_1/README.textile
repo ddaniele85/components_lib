@@ -10,9 +10,6 @@ Paste the code within the email’s <head>, before the closing </head> tag.
 Copy the HTML component and pasted in the main body of your emails, do not nest the code with existing tables - make sure the code is placed in a dedicated section of the template.
 
 
-- Visual Customisation
-For advanced customisations, refer to the Email Development Team.
-
 - Component Dimensions
 Default width: 600px.
 Ensure that:
@@ -25,12 +22,12 @@ to be
 <table cellpadding="0" cellspacing="0" border="0" width="YOURTABLESIZE" class="resptab" role="presentation" style="width:YOURTABLESIZEpx;" bgcolor="#ffffff">
 
 - Images
-Image width Default: 400px
+Image width Default: 600px
 Must match the component width
 Image height Default: 400px
 Can be adjusted, but must remain consistent across all images
 
-<img src="https://placehold.co/800x800/?text=GIF" alt="" style="font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif; display: block; border: 0; font-size: 16px; font-weight: normal; color: #000001; line-height: 16px; mso-line-height-rule: exactly;" border="0" class="respimg" width="600" height="400">
+<img src="https://placehold.co/1200x800/?text=Image1" alt="" style="font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif; display: block; border: 0; font-size: 16px; font-weight: normal; color: #000001; line-height: 16px; mso-line-height-rule: exactly;" border="0" class="respimg" width="600" height="400">
 
 to be
-<img src="https://placehold.co/800x800/?text=GIF" alt="" style="font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif; display: block; border: 0; font-size: 16px; font-weight: normal; color: #000001; line-height: 16px; mso-line-height-rule: exactly;" border="0" class="respimg" width="YOURIMAGEWIDTH" height="YOURIMAGEHEIGHT">
+<img src="https://placehold.co/1200x800/?text=Image1" alt="" style="font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif; display: block; border: 0; font-size: 16px; font-weight: normal; color: #000001; line-height: 16px; mso-line-height-rule: exactly;" border="0" class="respimg" width="YOURIMAGEWIDTH" height="YOURIMAGEHEIGHT">

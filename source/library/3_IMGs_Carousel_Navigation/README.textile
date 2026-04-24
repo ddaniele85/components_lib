@@ -7,6 +7,7 @@
 - Component Integration
 Copy the CSS block <style></style> from the source HTML file.
 Paste the code within the email’s <head>, before the closing </head> tag.
+Copy the HTML component and pasted in the main body of your emails, do not nest the code with existing tables - make sure the code is placed in a dedicated section of the template.
 
 - Visual Customisation
 For advanced customisations, refer to the Email Development Team.
