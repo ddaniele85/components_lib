@@ -679,6 +679,7 @@ ul, li {
   max-width: 230px;
   width: 100%;
 }
+.widget ul{padding-left: 20px;}
 
 /*------------------------------------------------------------------
  # contact-form style
