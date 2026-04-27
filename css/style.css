@@ -421,7 +421,7 @@ ul, li {
 -------------------------------------------------------------------*/
 .sidenav {
   top: 0;
-  width: 340px;
+  width: 420px;
   min-height: 20vh;
   padding: 60px;
   transition: 0.3s ease;
