@@ -1,0 +1,143 @@
+<style type="text/css">
+body {
+    padding: 0;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+/* Hide Fallback content first */
+.fallback {
+    display: none;
+}
+.carousel {
+    display: block !important;
+    max-height: none !important;
+    position: relative;
+}
+/* 
+  Selective blocking for clients.
+  - Samsung (#MessageViewBody) - no absolute positioning
+  - Comcast/Zimbra (body.MsgBody) - inconsistent CSS support
+  */
+#MessageViewBody .fallback, body.MsgBody .fallback {
+    display: block;
+}
+#MessageViewBody .carousel, body.MsgBody .carousel {
+    display: none !important;
+}
+.carousel a {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+.carousel img {
+    display: block!important;
+    width: 100% !important;
+    height: auto !important;
+}
+.carousel.responsive {
+    width: 100% !important;
+}
+.carousel.responsive .car-cont {
+    width: 100% !important;
+    height: auto !important;
+}
+/* SLIDE */
+
+.carousel.slide a {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 1;
+    width: 100%;
+    -webkit-animation: slide-anim 18s linear infinite;
+}
+.carousel.slide a:nth-child(1) {
+    position: relative;
+    -webkit-animation-delay: -15s;
+}
+.carousel.slide a:nth-child(2) {
+    -webkit-animation-delay: -12s;
+}
+.carousel.slide a:nth-child(3) {
+    -webkit-animation-delay: -9s;
+}
+.carousel.slide a:nth-child(4) {
+    -webkit-animation-delay: -6s;
+}
+.carousel.slide a:nth-child(5) {
+    -webkit-animation-delay: -3s;
+}
+.carousel.slide a:nth-child(6) {
+    -webkit-animation-delay: 0s;
+}
+
+  /* iOS doesn't like negative delay with translates (transform:translateX(100%);) */
+  /* So we use margin although it is less "smooth" */
+@-webkit-keyframes slide-anim {
+    /* slide in */
+    0% {
+        margin-left: 100%;
+    }
+    5% {
+        margin-left: 0%;
+    }
+
+    /* visible */
+    16.66% {
+        margin-left: 0%;
+    }
+
+    /* slide out */
+    21.66% {
+        margin-left: -100%;
+    }
+
+    100% {
+        margin-left: -100%;
+    }
+}
+
+}
+</style> 
+
+
+
+      <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="resptab" role="presentation" style="width:600px;"> 
+        <tr align="center">
+          <td align="center">
+      <!-- content --> 
+      <!-- animated carousel --> 
+      <!--[if !mso]> -->
+        <div class="carousel slide responsive" style="overflow:hidden;display:none;max-height:0px;">
+          <div class="car-cont" style="position:relative; width: 600px;">
+            <a href="##">
+              <img src="https://placehold.co/1200x750/?text=Image+1" border="0"  class="respimg" width="600" height="375">
+            </a>
+            <a href="##">
+              <img src="https://placehold.co/1200x750/?text=Image+2" border="0"  class="respimg" width="600" height="375">
+            </a>
+            <a href="##">
+              <img src="https://placehold.co/1200x750/?text=Image+3" border="0"  class="respimg" width="600" height="375">
+            </a>
+            <a href="##">
+              <img src="https://placehold.co/1200x750/?text=Image+4" border="0"  class="respimg" width="600" height="375">
+            </a>
+            <a href="##">
+              <img src="https://placehold.co/1200x750/?text=Image+5" border="0"  class="respimg" width="600" height="375">
+            </a>
+            <a href="##">
+              <img src="https://placehold.co/1200x750/?text=Image+6" border="0"  class="respimg" width="600" height="375">
+            </a>
+          </div>
+        </div>
+      <!--<![endif]--> 
+          <!-- static fallback content -->
+          <div class="fallback">
+            <a href="##" >
+              <img src="https://placehold.co/1200x750/?text=Fallback+Image" alt="" style="display: block; border: 0; font-size: 16px; line-height: 16px;" border="0" class="respimg" width="600" height="375">
+            </a>
+          </div>
+          <!-- /content -->
+          </td>
+        </tr>
+      </table>
