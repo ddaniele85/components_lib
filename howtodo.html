@@ -127,27 +127,27 @@ For illustrative purposes, a folder has been created containing the HTML file, a
 Create a folder that contains your HTML template, a separate folder for the assets needed for the component, and the extracted ZIP folder of the interactive component itself.  <br><br>
 </p>
             <div class="embed-responsive embed-responsive-4by3" style="margin-bottom: 40px;">
-  <iframe class="embed-responsive-item" src="showcase/vids/tutorial_pt1.mp4" allowfullscreen></iframe>
+  <iframe class="embed-responsive-item" src="https://ddaniele85.github.io/components_lib/showcase/vids/tutorial_pt1.mp4" allowfullscreen></iframe>
 </div>
 <p>Step 2: <br>
 Open your HTML template in the editor of your choice. In this tutorial, we will replace the hero image with the interactive component.  <br><br>
 </p>
             <div class="embed-responsive embed-responsive-4by3" style="margin-bottom: 40px;">
-  <iframe class="embed-responsive-item" src="showcase/vids/tutorial_pt2.mp4" allowfullscreen></iframe>
+  <iframe class="embed-responsive-item" src="https://ddaniele85.github.io/components_lib/showcase/vids/tutorial_pt2.mp4" allowfullscreen></iframe>
 </div>
 
 <p>Step 3: <br>
 Back in the HTML template, identify the hero image section and delete the code, making sure the rest of the markup still includes all necessary closing tr, td, and table tags.  <br><br>
 </p>
             <div class="embed-responsive embed-responsive-4by3" style="margin-bottom: 40px;">
-  <iframe class="embed-responsive-item" src="showcase/vids/tutorial_pt3.mp4" allowfullscreen></iframe>
+  <iframe class="embed-responsive-item" src="https://ddaniele85.github.io/components_lib/showcase/vids/tutorial_pt3.mp4" allowfullscreen></iframe>
 </div>
 <p>Step 4: <br>
 Read the instructions in the README file carefully. <br>
 Copy and paste the CSS code of the interactive component as indicated.<br><br>
 </p>
             <div class="embed-responsive embed-responsive-4by3" style="margin-bottom: 40px;">
-  <iframe class="embed-responsive-item" src="showcase/vids/tutorial_pt4.mp4" allowfullscreen></iframe>
+  <iframe class="embed-responsive-item" src="https://ddaniele85.github.io/components_lib/showcase/vids/tutorial_pt4.mp4" allowfullscreen></iframe>
 </div>
 <p>Step 5: <br>
 Read the instructions in the README file carefully. <br>
@@ -155,14 +155,14 @@ Copy and paste the HTML code of the interactive component to replace the hero se
 Preview the HTML email in a browser to view the component and check for any errors.<br><br>
 </p>
             <div class="embed-responsive embed-responsive-4by3" style="margin-bottom: 40px;">
-  <iframe class="embed-responsive-item" src="showcase/vids/tutorial_pt5.mp4" allowfullscreen></iframe>
+  <iframe class="embed-responsive-item" src="https://ddaniele85.github.io/components_lib/showcase/vids/tutorial_pt5.mp4" allowfullscreen></iframe>
 </div>
 <p>Step 6: <br>
 Read the instructions in the README file carefully. <br>
 Check the width of the email and make any necessary adjustments to the interactive component. In this case, the width of the email and the component match: both are 600 px, so no code changes are required. <br><br>
 </p>
             <div class="embed-responsive embed-responsive-4by3" style="margin-bottom: 40px;">
-  <iframe class="embed-responsive-item" src="showcase/vids/tutorial_pt6.mp4" allowfullscreen></iframe>
+  <iframe class="embed-responsive-item" src="https://ddaniele85.github.io/components_lib/showcase/vids/tutorial_pt6.mp4" allowfullscreen></iframe>
 </div>
 
 
@@ -172,7 +172,7 @@ In the absence of a dedicated fallback asset, the first available image has been
 After adding the images and saving the file, simply refresh the email page in the browser to verify the correct functioning of the carousel; as expected, the component is fully compatible with mobile devices<br><br>
 </p>
             <div class="embed-responsive embed-responsive-4by3">
-  <iframe class="embed-responsive-item" src="showcase/vids/tutorial_pt7.mp4" allowfullscreen></iframe>
+  <iframe class="embed-responsive-item" src="https://ddaniele85.github.io/components_lib/showcase/vids/tutorial_pt7.mp4" allowfullscreen></iframe>
 </div>
 
 
@@ -211,51 +211,7 @@ After adding the images and saving the file, simply refresh the email page in th
     <!-- Main Script -->
     <script src="js/script.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-    const video = document.getElementById('videoPlayer');
-        const playPauseBtn = document.getElementById('playPauseBtn');
-        const progressBar = document.getElementById('progressBar');
-        const muteBtn = document.getElementById('muteBtn');
-        const fullscreenBtn = document.getElementById('fullscreenBtn');
 
-        playPauseBtn.addEventListener('click', () => {
-            if (video.paused) {
-                video.play();
-                playPauseBtn.innerHTML = '<i class="bi bi-pause-fill"></i>';
-            } else {
-                video.pause();
-                playPauseBtn.innerHTML = '<i class="bi bi-play-fill"></i>';
-            }
-        });
-
-        video.addEventListener('timeupdate', () => {
-            const progress = (video.currentTime / video.duration) * 100;
-            progressBar.value = progress;
-        });
-
-        progressBar.addEventListener('input', () => {
-            const time = (progressBar.value / 100) * video.duration;
-            video.currentTime = time;
-        });
-
-        muteBtn.addEventListener('click', () => {
-            video.muted = !video.muted;
-            muteBtn.innerHTML = video.muted ? '<i class="bi bi-volume-mute-fill"></i>' : '<i class="bi bi-volume-up-fill"></i>';
-        });
-
-        fullscreenBtn.addEventListener('click', () => {
-            if (video.requestFullscreen) {
-                video.requestFullscreen();
-            } else if (video.mozRequestFullScreen) {
-                video.mozRequestFullScreen();
-            } else if (video.webkitRequestFullscreen) {
-                video.webkitRequestFullscreen();
-            } else if (video.msRequestFullscreen) {
-                video.msRequestFullscreen();
-            }
-        });
-</script>
 
 
 
