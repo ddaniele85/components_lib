@@ -1,0 +1,134 @@
+<style type="text/css">
+body {
+    padding: 0;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+
+.fallback { display: none; }
+
+.carousel {
+    display: block !important;
+    max-height: none !important;
+    position: relative;
+}
+
+#MessageViewBody .fallback, body.MsgBody .fallback {
+    display: block;
+}
+#MessageViewBody .carousel, body.MsgBody .carousel {
+    display: none !important;
+}
+
+.carousel a {
+    width: 100%;
+    display: block;
+}
+
+.carousel img {
+    display: block!important;
+    width: 100% !important;
+    height: auto !important;
+}
+
+.carousel.responsive { width: 100% !important; }
+
+.carousel.responsive .car-cont {
+    width: 100% !important;
+    height: auto !important;
+}
+
+/* FADE 4 IMMAGINI */
+.carousel.fade a {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    -webkit-animation: car-anim 12s linear infinite;
+}
+
+.carousel.fade a:nth-child(1) {
+    position: relative;
+    -webkit-animation-delay: -12s;
+}
+.carousel.fade a:nth-child(2) {
+    -webkit-animation-delay: -9s;
+}
+.carousel.fade a:nth-child(3) {
+    -webkit-animation-delay: -6s;
+}
+.carousel.fade a:nth-child(4) {
+    -webkit-animation-delay: -3s;
+}
+
+@-webkit-keyframes car-anim {
+
+  0% {
+    z-index:2;
+    opacity:0;
+  }
+
+  5% {
+    opacity:1;
+  }
+
+  25% {
+    z-index:2;
+  }
+
+  25.1% {
+    z-index:1;
+  }
+
+  30% {
+    opacity:1;
+  }
+
+  30.1% {
+    opacity:0;
+  }
+
+  100% {
+    z-index:1;
+    opacity:0;
+  }
+}
+
+}
+</style>
+
+       
+
+<table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="resptab" role="presentation" style="width:600px;">
+  <tr align="center">
+    <td align="center">
+      <!-- content -->
+      <!-- animated carousel -->
+      <!--[if !mso]> -->
+      <div class="carousel fade responsive effects" style="overflow:hidden;display:none;max-height:0px;">
+        <div class="car-cont" style="position:relative; width:600px; height:400px;">
+          <a href="##">
+            <img src="https://placehold.co/1200x800/?text=Image+1" border="0">
+          </a>
+          <a href="##">
+            <img src="https://placehold.co/1200x800/?text=Image+2" border="0">
+          </a>
+          <a href="##">
+            <img src="https://placehold.co/1200x800/?text=Image+3" border="0">
+          </a>
+          <a href="##">
+            <img src="https://placehold.co/1200x800/?text=Image+4" border="0">
+          </a>
+        </div>
+      </div>
+      <!--<![endif]-->
+      <br><br>
+      <!-- static fallback content -->
+      <div class="fallback">
+        <a href="##" >
+          <img src="https://placehold.co/1200x800/?text=fallback+Image" width="600" height="400" style="display:block;" border="0" class="respimg">
+        </a>
+      </div>
+      <!-- /content -->
+    </td>
+  </tr>
+</table>
